@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Buddy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Front Page -->
+  <div id="frontPage" class="page active">
+    <h1 class="welcome-title">The Study Buddy Tool</h1>
+    <div class="api-grid">
+      <!-- Rewriter API -->
+      <div class="api-card" data-api="rewriter">
+        <div class="api-shape red">
+          <svg class="api-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+        </div>
+        <div class="api-info">
+          <div class="api-title">Rewriter API</div>
+          <div class="api-help">
+            <span class="question-mark">?</span>
+            <div class="api-tooltip">Improve content with alternative options and better phrasing</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Translator API -->
+      <div class="api-card" data-api="translator">
+        <div class="api-shape yellow">
+          <svg class="api-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
+        <div class="api-info">
+          <div class="api-title">Translator API</div>
+          <div class="api-help">
+            <span class="question-mark">?</span>
+            <div class="api-tooltip">Translate text into your preferred language</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prompt API -->
+      <div class="api-card" data-api="prompt">
+        <div class="api-shape blue">
+          <svg class="api-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <div class="api-info">
+          <div class="api-title">Prompt API</div>
+          <div class="api-help">
+            <span class="question-mark">?</span>
+            <div class="api-tooltip">Generate dynamic prompts with multimodal support for images and audio</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Writer API -->
+      <div class="api-card" data-api="writer">
+        <div class="api-shape green">
+          <svg class="api-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+            <path d="M2 2l7.586 7.586"></path>
+          </svg>
+        </div>
+        <div class="api-info">
+          <div class="api-title">Writer API</div>
+          <div class="api-help">
+            <span class="question-mark">?</span>
+            <div class="api-tooltip">Create original and engaging text content</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summarizer API -->
+      <div class="api-card" data-api="summarizer">
+        <div class="api-shape orange">
+          <svg class="api-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="api-info">
+          <div class="api-title">Summarizer API</div>
+          <div class="api-help">
+            <span class="question-mark">?</span>
+            <div class="api-tooltip">Distill complex information into clear insights</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proofreader API -->
+      <div class="api-card" data-api="proofreader">
+        <div class="api-shape purple">
+          <svg class="api-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M4 7V4h16v3"></path>
+            <path d="M9 20h6"></path>
+            <path d="M12 4v16"></path>
+          </svg>
+        </div>
+        <div class="api-info">
+          <div class="api-title">Proofreader API</div>
+          <div class="api-help">
+            <span class="question-mark">?</span>
+            <div class="api-tooltip">Correct grammar mistakes with ease</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Section Page Template -->
+  <div id="apiPage" class="page">
+    <div class="sidebar" id="sidebar">
+      <button class="sidebar-btn" id="newChatBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        <span>New Chat</span>
+      </button>
+      <div class="chats-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Chats</span>
+      </div>
+      <div class="chats-list" id="chatsList"></div>
+      <button class="sidebar-btn back-btn" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back</span>
+      </button>
+    </div>
+
+    <div class="main-content">
+      <button class="toggle-sidebar" id="toggleSidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="api-section-header">
+        <div class="api-icon-large" id="apiIconLarge"></div>
+        <h2 id="apiSectionTitle"></h2>
+      </div>
+
+      <div class="chat-container" id="chatContainer">
+        <div class="empty-state" id="emptyState">
+          <div class="empty-icon" id="emptyIcon"></div>
+          <p id="emptyPrompt">What can I help you with today?</p>
+        </div>
+        <div class="messages" id="messages"></div>
+      </div>
+
+      <div class="input-container">
+        <!-- Multimodal Upload Section (only visible for Prompt API) -->
+        <div class="multimodal-section" id="multimodalSection" style="display: none;">
+          <div class="upload-buttons">
+            <button class="upload-btn" id="imageUploadBtn" title="Upload Image">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span>Add Image</span>
+            </button>
+            <button class="upload-btn" id="audioUploadBtn" title="Upload Audio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+              <span>Add Audio</span>
+            </button>
+          </div>
+          <input type="file" id="imageInput" accept="image/*" style="display: none;">
+          <input type="file" id="audioInput" accept="audio/*" style="display: none;">
+          
+          <!-- Preview Area -->
+          <div class="media-preview" id="mediaPreview"></div>
+        </div>
+
+        <textarea 
+          id="userInput" 
+          placeholder="Type your message here..."
+          rows="3"
+        ></textarea>
+        <button id="generateBtn" class="generate-btn">Generate Response</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
