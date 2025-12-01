@@ -57,7 +57,7 @@ Install the Extension
 Method 1: Load Unpacked (Development)
 Clone or download this repository:
 bash
-   git clone https://github.com/yourusername/study-buddy.git
+   git clone https://github.com/itshectortoro/DevPost-AI-Chome-Extension
 Open Chrome and navigate to chrome://extensions/
 Enable Developer mode (toggle in top-right corner)
 Click Load unpacked
@@ -224,7 +224,7 @@ Powered by Google Chrome's Built-in AI APIs
 Uses Gemini Nano on-device language model
 Inspired by the need for privacy-focused, accessible AI tools for students
 📧 Contact
-Project Link: https://github.com/yourusername/study-buddy
+Project Link: https://github.com/itshectortoro/DevPost-AI-Chome-Extension
 
 Issues & Feedback: GitHub Issues
 
